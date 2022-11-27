@@ -18,15 +18,26 @@ a{
 
 }
 
+ul{
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+
+}
+
 p, h1, h2, h3{
     margin: 0px;
 }
 
 p{
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.3;
 }
-
+.header{
+    display: grid;
+    justify-items: center;
+    gap: 60px
+}
 .menu{
     display: flex;
     flex-wrap: wrap;
@@ -35,11 +46,18 @@ p{
 }
 
 .menu a{
+    display: block;
     background-color: #fff ;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
     border-radius: 4px;
     color: black;
     text-transform: uppercase;
+    border: 2px solid #fff;
+}
+
+.menu a:hover{
+    border: 2px solid #e21;
+
 }
 
 .conteudo{
@@ -59,7 +77,8 @@ p{
     justify-items: end;
 }
 
-.detalhe{
+.introducao::before{
+    content:"";
     width: 60px;
     height: 4px;
     background-color: #e21;
@@ -74,13 +93,18 @@ p{
 .botao{
     background-color: #e23;
     color: #fff;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
     border-radius: 4px;
     text-transform: uppercase;
 }
 
+.botao:hover{
+    background: #900;
+}
+
 .subtitulo{
-    font-size: 64px;
+    background-image: url("./img/onda.svg");
+    font-size: 4rem;
     text-decoration: uppercase;
     color:rgba(0, 0, 0, 0.2);
     text-align: right;
@@ -98,13 +122,15 @@ p{
     grid-template-columns: auto 1fr;
     gap: 10px 20px ;
     padding: 20px;
-
-  
-    
-    
-
+    border-left: 3px solid transparent;
+}
+.vantagens-item:nth-child(odd){
+    background-color: #f7f7f7;
 }
 
+.vantagens-item:hover{
+    border-left: 3px solid #e21;
+}
 .vantagens-item p{
     grid-column: 2;
 }
